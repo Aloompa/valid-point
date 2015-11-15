@@ -1,0 +1,24 @@
+{
+  "name": "valid-point",
+  "version": "1.0.0",
+  "description": "A simple extensible validation module",
+  "main": "src",
+  "scripts": {
+    "coverage": "node_modules/.bin/istanbul cover --hook-run-in-context node_modules/.bin/_mocha -- -R spec",
+    "test": "node_modules/.bin/_mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aloompa/valid-point.git"
+  },
+  "author": "Aloompa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aloompa/valid-point/issues"
+  },
+  "homepage": "https://github.com/Aloompa/valid-point#readme",
+  "devDependencies": {
+    "mocha": "^2.3.3",
+    "questy": "^1.1.0"
+  }
+}
