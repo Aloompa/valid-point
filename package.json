@@ -2,10 +2,12 @@
   "name": "valid-point",
   "version": "1.0.0",
   "description": "A simple extensible validation module",
-  "main": "src",
+  "main": "lib",
   "scripts": {
     "coverage": "node_modules/.bin/istanbul cover --hook-run-in-context node_modules/.bin/_mocha -- -R spec",
-    "test": "node_modules/.bin/_mocha"
+    "test": "node_modules/.bin/_mocha",
+    "compile": "node_modules/.bin/babel --presets es2015,stage-0 -d lib/ src/",
+    "prepublish": "npm run test; npm run compile"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,9 @@
   },
   "homepage": "https://github.com/Aloompa/valid-point#readme",
   "devDependencies": {
+    "babel-cli": "^6.1.18",
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-stage-0": "^6.1.18",
     "istanbul": "^0.4.0",
     "mocha": "^2.3.3",
     "questy": "^1.1.0"
