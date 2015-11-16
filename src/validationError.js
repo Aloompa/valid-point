@@ -1,11 +1,10 @@
 'use strict';
-
-
 class ValidationError extends Error {
-	constructor (errors) {
+
+    constructor (errors) {
         super(errors);
 
-		/* istanbul ignore else */
+        /* istanbul ignore else */
         if (Error.hasOwnProperty('captureStackTrace')) {
             Error.captureStackTrace(this, this.constructor);
 
@@ -18,11 +17,12 @@ class ValidationError extends Error {
         Object.defineProperty(this, 'message', {
             value: errors
         });
-	}
+    }
 
-	get name () {
+    get name () {
         return this.constructor.name;
-	}
+    }
+
 }
 
 module.exports = ValidationError;
