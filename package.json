@@ -30,6 +30,7 @@
     "babel-preset-stage-0": "^6.1.18",
     "istanbul": "^0.4.0",
     "jscs": "^2.5.1",
+    "jshint": "^2.8.0",
     "mocha": "^2.3.3",
     "questy": "^1.1.0",
     "webpack": "^1.12.6"
