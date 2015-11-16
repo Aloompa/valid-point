@@ -49,4 +49,16 @@ describe('Validator Rules', () => {
             assert.ok(!test);
         });
     });
+
+    describe('When the field is a string', () => {
+        it('Should allow a string', () => {
+            let test = rules.string.fn('hello');
+            assert.ok(test);
+        });
+
+        it('Should not allow a number', () => {
+            let test = rules.string.fn(12);
+            assert.ok(!test);
+        });
+    });
 });

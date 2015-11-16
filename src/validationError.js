@@ -5,6 +5,7 @@ class ValidationError extends Error {
 	constructor (errors) {
         super(errors);
 
+		/* istanbul ignore else */
         if (Error.hasOwnProperty('captureStackTrace')) {
             Error.captureStackTrace(this, this.constructor);
 
